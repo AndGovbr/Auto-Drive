@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Construir um Carro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Garagem Custom: Como Construir um Carro</h1>
+        <div class="creditos">
+            Criado por: Cauã, André, Guilherme, Vitor D, Lucas P e 2D
+            <div class="tooltip-container">
+                <span class="ajuda-icon">?</span>
+                <span class="tooltip-text">Projeto acadêmico sobre montagem e customização de veículos.</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="abas-container">
+        <button class="aba-btn active" onclick="abrirAba(event, 'aba-pecas')">Montar Peças (10 Carros)</button>
+        <button class="aba-btn" onclick="abrirAba(event, 'aba-galeria')">Galeria de Fotos</button>
+    </nav>
+
+    <main class="conteudo">
+
+        <section id="aba-pecas" class="aba-conteudo active">
+            <h2>Escolha um Carro e Monte suas Peças</h2>
+            <p>Selecione um dos 10 modelos abaixo para ver os detalhes e escolher os componentes ideais de construção:</p>
+            
+            <div class="configurador">
+                <div class="lista-carros">
+                    <h3>Selecione o Modelo:</h3>
+                    <select id="select-carro" onchange="atualizarCarro()">
+                        <option value="0">Esportivo Clássico</option>
+                        <option value="1">Superesportivo Moderno</option>
+                        <option value="2">Muscle Car Americano</option>
+                        <option value="3">Off-Road 4x4</option>
+                        <option value="4">Sedan de Luxo</option>
+                        <option value="5">Hatch Hot Custom</option>
+                        <option value="6">Carro de Corrida / F1</option>
+                        <option value="7">SUV Elétrico</option>
+                        <option value="8">JDM Tuning</option>
+                        <option value="9">Hipercarro Conceito</option>
+                    </select>
+                    
+                    <div class="carro-preview">
+                        <img id="carro-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500" alt="Carro Selecionado">
+                        <p id="carro-descricao">Um carro rápido com foco em aerodinâmica e motor de alta rotação.</p>
+                    </div>
+                </div>
+
+                <div class="painel-pecas">
+                    <h3>Painel de Montagem (Passo a Passo)</h3>
+                    
+                    <div class="item-peca">
+                        <label for="motor">1. Motorização:</label>
+                        <select id="motor">
+                            <option>V8 Biturbo (Alta Potência)</option>
+                            <option>L6 Turbo (Equilíbrio e Torque)</option>
+                            <option>Motor Elétrico Síncrono (Torque Imediato)</option>
+                        </select>
+                    </div>
+
+                    <div class="item-peca">
+                        <label for="chassi">2. Chassi e Estrutura:</label>
+                        <select id="chassi">
+                            <option>Fibra de Carbono (Leveza)</option>
+                            <option>Alumínio Espacial (Resistência)</option>
+                            <option>Aço Tubular (Segurança/Off-road)</option>
+                        </select>
+                    </div>
+
+                    <div class="item-peca">
+                        <label for="pneus">3. Rodas e Pneus:</label>
+                        <select id="pneus">
+                            <option>Pneus Slick (Pista)</option>
+                            <option>Pneus All-Terrain (Lama e Asfalto)</option>
+                            <option>Rodas de Liga Leve Forjadas (Rua)</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-construir" onclick="resumoMontagem()">Finalizar Construção</button>
+                    <div id="resultado-construcao"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="aba-galeria" class="aba-conteudo">
+            <h2>Galeria de Inspiração</h2>
+            <p>Confira mais imagens detalhadas de carros incríveis para inspirar sua montagem.</p>
+            <div class="galeria-grid" id="container-galeria">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

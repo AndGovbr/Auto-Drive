@@ -1,0 +1,40 @@
+O AutoDrive é uma aplicação web moderna e responsiva projetada para funcionar como uma vitrine interativa de carros e modelos automotivos. O projeto foi desenvolvido focado na experiência do usuário (UX), utilizando uma estética limpa, futurista e de alta performance, ideal para concessionárias digitais, catálogos de fabricantes ou portais de entusiastas de motores.
+
+O site foi estruturado utilizando as três tecnologias fundamentais da web: HTML5, CSS3 e JavaScript Moderno (ES6+), sem a dependência de frameworks externos, garantindo um carregamento rápido e código limpo.
+
+🛠️ Arquitetura e Divisão de Componentes
+1. Estrutura Estrutural (index.html)
+O arquivo HTML atua como o esqueleto do site, priorizando a semântica para melhor acessibilidade e SEO. Ele é dividido em três blocos principais:
+
+Header (Cabeçalho): Contém a identidade visual da marca (AutoDrive) e uma barra de navegação que abriga os botões de controle de filtro.
+
+Main (Seção Principal): Contém um contêiner dinâmico (#catalogo-carros). Este espaço foi projetado para ser modular, onde a estrutura de cada "card" de veículo é injetada em tempo real, evitando código duplicado no HTML.
+
+Footer (Rodapé): Uma seção simples com direitos autorais e a assinatura de marca da aplicação.
+
+2. Design e Estilização (style.css)
+O visual adota o conceito de Dark Mode (Tema Escuro), muito popular no nicho automotivo por transmitir sofisticação, tecnologia e esportividade.
+
+Paleta de Cores: Baseada em tons de grafite escuro (#121214 e #1a1a1e) para o fundo e blocos, com contrastes em branco para leitura e detalhes em Azul Ciano Neon (#00e6ff), que guia os olhos do usuário para os elementos interativos.
+
+Layout Adaptável (Responsividade): Utiliza CSS Grid para organizar os carros em colunas que se autoajustam dependendo do tamanho da tela do dispositivo (Monitores, Tablets ou Smartphones). Também faz uso de Flexbox para o alinhamento perfeito do cabeçalho e menu.
+
+Microinterações: Efeitos de Hover (passar o mouse) suavizados com transições CSS, fazendo com que os botões brilhem e os cards dos carros subam levemente (translateY), gerando uma sensação de profundidade e dinamismo.
+
+3. Inteligência e Dinamismo (script.js)
+O JavaScript funciona como o "motor" do site, simulando o comportamento de uma aplicação que consome dados de um servidor.
+
+Banco de Dados Interno: Gerencia as informações dos veículos através de um Array de Objetos, onde cada carro possui propriedades como: Nome, Categoria (Esportivo, SUV, Elétrico), Motorização, Destaque/Performance e Link da Imagem.
+
+Renderização Dinâmica: Uma função lê a lista de carros e cria os elementos HTML internos sob demanda, preenchendo as imagens e especificações de forma automatizada.
+
+Sistema de Filtragem em Tempo Real: Escuta os cliques nos botões do cabeçalho. Ao selecionar uma categoria, o script filtra o array de dados e atualiza a tela instantaneamente (sem recarregar a página), proporcionando uma navegação fluida e rápida.
+
+🚀 Principais Funcionalidades
+Filtragem instantânea de veículos por categorias (Esportivos, SUVs, Elétricos e Geral).
+
+Layout Mobile-First / Responsivo que se adapta perfeitamente do celular ao desktop.
+
+Feedback visual indicando qual filtro está ativo no momento.
+
+Imagens integradas diretamente de repositórios de alta definição (Unsplash).
